@@ -206,6 +206,32 @@ h1 span:last-child {
   animation: pulse 2.2s ease-out infinite;
 }
 
+.contact {
+  display: block;
+  width: max-content;
+  margin: 0.85rem 0 0 auto;
+  padding: 0.38rem 0.15rem;
+  color: white;
+  font-size: clamp(0.9rem, 1.25vw, 1.05rem);
+  font-weight: 750;
+  letter-spacing: 0.035em;
+  text-decoration-color: rgb(255 255 255 / 55%);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.34rem;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.contact:hover {
+  color: var(--sun);
+  transform: translateY(-1px);
+}
+
+.contact:focus-visible {
+  border-radius: 0.25rem;
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
 .layer--characters {
   z-index: 3;
   inset: auto auto -5.8% -3.5%;
