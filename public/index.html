@@ -3,170 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#238fc2" />
+    <meta name="theme-color" content="#10a8d2" />
     <meta
       name="description"
-      content="Something new is coming to melamela.cloud."
+      content="Mela mela — something cheerful is gathering over Malta. Stay tuned."
     />
-    <title>Stay tuned | melamela.cloud</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        font-family:
-          Inter, ui-rounded, "Arial Rounded MT Bold", system-ui, -apple-system,
-          BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        width: 100%;
-        min-height: 100%;
-        margin: 0;
-      }
-
-      body {
-        min-height: 100svh;
-        overflow: hidden;
-        color: #fff8e7;
-        background: #238fc2;
-      }
-
-      .hero {
-        position: relative;
-        display: grid;
-        min-height: 100svh;
-        place-items: center end;
-        isolation: isolate;
-        padding: clamp(1.5rem, 6vw, 6rem);
-        background-image: url("melamela-background.png");
-        background-position: center;
-        background-size: cover;
-      }
-
-      .hero::before {
-        position: absolute;
-        z-index: -1;
-        inset: 0;
-        content: "";
-        background:
-          linear-gradient(
-            90deg,
-            rgb(10 36 48 / 3%) 35%,
-            rgb(8 35 49 / 30%) 61%,
-            rgb(4 26 38 / 72%) 100%
-          ),
-          linear-gradient(0deg, rgb(4 23 32 / 22%), transparent 48%);
-      }
-
-      .message {
-        width: min(34rem, 46vw);
-        text-align: right;
-        text-shadow: 0 0.16em 0.55em rgb(4 26 38 / 48%);
-        animation: arrive 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-      }
-
-      h1 {
-        max-width: 7ch;
-        margin: 0 0 1.25rem auto;
-        font-size: clamp(4.2rem, 9.6vw, 9.5rem);
-        font-weight: 900;
-        line-height: 0.83;
-        letter-spacing: -0.075em;
-        text-wrap: balance;
-      }
-
-      a {
-        display: inline-block;
-        padding: 0.75rem 1rem;
-        border: 1px solid rgb(255 248 231 / 58%);
-        border-radius: 999px;
-        color: inherit;
-        font-size: clamp(1rem, 1.55vw, 1.2rem);
-        font-weight: 650;
-        letter-spacing: 0.01em;
-        text-decoration: none;
-        background: rgb(6 30 42 / 28%);
-        box-shadow: 0 0.7rem 2.5rem rgb(2 19 28 / 18%);
-        backdrop-filter: blur(12px);
-        transition:
-          transform 180ms ease,
-          background-color 180ms ease,
-          border-color 180ms ease;
-      }
-
-      a:hover,
-      a:focus-visible {
-        border-color: #fff8e7;
-        background: rgb(255 248 231 / 18%);
-        transform: translateY(-2px) rotate(-1deg);
-      }
-
-      a:focus-visible {
-        outline: 3px solid #f9c74f;
-        outline-offset: 4px;
-      }
-
-      @keyframes arrive {
-        from {
-          opacity: 0;
-          transform: translateY(1.2rem) rotate(1deg);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-
-      @media (max-width: 700px) {
-        .hero {
-          place-items: end center;
-          padding: 2rem 1.25rem 3rem;
-          background-position: 43% center;
-        }
-
-        .hero::before {
-          background: linear-gradient(
-            0deg,
-            rgb(3 23 33 / 88%) 0%,
-            rgb(4 27 40 / 48%) 37%,
-            rgb(4 27 40 / 4%) 70%
-          );
-        }
-
-        .message {
-          width: 100%;
-          text-align: center;
-        }
-
-        h1 {
-          max-width: none;
-          margin: 0 0 1rem;
-          font-size: clamp(3.4rem, 18vw, 5.3rem);
-          line-height: 0.9;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .message {
-          animation: none;
-        }
-
-        a {
-          transition: none;
-        }
-      }
-    </style>
+    <meta property="og:title" content="Mela Mela" />
+    <meta
+      property="og:description"
+      content="Something cheerful is gathering over Malta. Stay tuned."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/melamela-background.png" />
+    <title>mela mela · stay tuned</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <main class="hero">
-      <section class="message" aria-label="Coming soon">
-        <h1>mela~ mela</h1>
-        <a href="mailto:paul@melamela.cloud">paul@melamela.cloud</a>
+    <main class="scene" aria-labelledby="site-title">
+      <div class="layer layer--sky" aria-hidden="true"></div>
+      <div class="layer layer--backdrop" aria-hidden="true"></div>
+
+      <div class="layer layer--clouds layer--clouds-far" aria-hidden="true">
+        <img src="/assets/clay-clouds.webp" alt="" />
+      </div>
+      <div class="layer layer--clouds layer--clouds-near" aria-hidden="true">
+        <img src="/assets/clay-clouds.webp" alt="" />
+      </div>
+
+      <div class="sun-glow" aria-hidden="true"></div>
+
+      <section class="copy">
+        <p class="eyebrow">FROM A SUNNY LITTLE ISLAND</p>
+        <h1 id="site-title">
+          <span>Mela.</span>
+          <span>Mela!</span>
+        </h1>
+        <p class="domain">melamela.cloud</p>
+        <p class="status"><span aria-hidden="true"></span> Stay tuned</p>
       </section>
+
+      <div class="layer layer--characters" aria-hidden="true">
+        <img src="/assets/clay-characters.webp" alt="" />
+      </div>
+
+      <div class="foreground-shadow" aria-hidden="true"></div>
+
+      <button class="motion-toggle" type="button" aria-pressed="false">
+        <span class="motion-toggle__icon" aria-hidden="true">Ⅱ</span>
+        <span class="motion-toggle__label">Pause motion</span>
+      </button>
     </main>
+    <script src="/script.js"></script>
   </body>
 </html>
