@@ -364,6 +364,23 @@ h1 {
   line-height: 1.72;
 }
 
+.product-link {
+  color: var(--cobalt);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 160ms ease;
+}
+
+.product-link:hover {
+  color: var(--coral);
+}
+
+.product-link:focus-visible {
+  border-radius: 0.2rem;
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
+}
+
 .about blockquote {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
