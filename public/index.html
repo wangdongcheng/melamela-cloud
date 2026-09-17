@@ -6,21 +6,22 @@
     <meta name="theme-color" content="#10a8d2" />
     <meta
       name="description"
-      content="Mela mela — something cheerful is gathering over Malta. Stay tuned."
+      content="melamela.cloud builds practical, dependable digital tools in Malta."
     />
     <meta property="og:title" content="Mela Mela" />
     <meta
       property="og:description"
-      content="Something cheerful is gathering over Malta. Stay tuned."
+      content="Practical, dependable digital tools—made in Malta."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/melamela-background.png" />
-    <title>mela mela · stay tuned</title>
+    <title>melamela.cloud</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <main class="scene" aria-labelledby="site-title">
+    <main>
+      <section class="scene" aria-labelledby="site-title">
       <div class="layer layer--sky" aria-hidden="true"></div>
       <div class="layer layer--backdrop" aria-hidden="true"></div>
 
@@ -36,11 +37,8 @@
       <section class="copy">
         <p class="eyebrow">FROM A SUNNY LITTLE ISLAND</p>
         <h1 id="site-title">
-          <span>Mela.</span>
-          <span>Mela!</span>
+          <img class="brand-logo" src="/logo.png" alt="melamela.cloud" />
         </h1>
-        <p class="domain">melamela.cloud</p>
-        <p class="status"><span aria-hidden="true"></span> Stay tuned</p>
         <a class="contact" href="mailto:paul@melamela.cloud">paul@melamela.cloud</a>
       </section>
 
@@ -50,10 +48,48 @@
 
       <div class="foreground-shadow" aria-hidden="true"></div>
 
+      <a class="scroll-cue" href="#about" aria-label="Continue to About melamela.cloud">
+        <span class="scroll-cue__label" aria-hidden="true">Discover more</span>
+        <span class="scroll-cue__arrow" aria-hidden="true">↓</span>
+      </a>
+
       <button class="motion-toggle" type="button" aria-pressed="false">
         <span class="motion-toggle__icon" aria-hidden="true">Ⅱ</span>
         <span class="motion-toggle__label">Pause motion</span>
       </button>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about__content">
+          <p class="about__eyebrow">MADE IN MALTA</p>
+          <h2 id="about-title">About melamela.cloud</h2>
+          <div class="about__copy">
+            <p>
+              melamela.cloud is a Malta-based software company focused on building
+              practical, dependable digital tools for real-world use. We favour clear
+              interfaces, thoughtful workflows and technology that stays out of the way.
+            </p>
+            <p>
+              Our development approach is careful and grounded: understand the problem,
+              keep the architecture straightforward, test the details and improve through
+              everyday use. From location-aware applications to operational tools, we aim
+              to create software that feels calm, responsive and trustworthy.
+            </p>
+            <p>
+              <em>MDTS - MALTA DRIVING TEST SIMULATOR</em> reflects this philosophy:
+              a focused product shaped around local context, practical needs and a
+              commitment to getting the small things right.
+            </p>
+          </div>
+          <blockquote>
+            <p>
+              Turn the problems you encounter into opportunities to make the world a
+              better place.
+            </p>
+            <footer>— Paul</footer>
+          </blockquote>
+        </div>
+      </section>
     </main>
     <script src="/script.js"></script>
   </body>
